@@ -1,7 +1,7 @@
-# Changelog for Thoth's Template GitHub Project
+# Changelog for Thoth's Pulp repository sync job
 
-## [0.1.0] - 2019-Sep-11 - goern
+## [0.0.0] - 2021-Jun-21 - fpokorny
 
 ### Added
 
-all the things that you see...
+* initial project import
