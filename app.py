@@ -33,7 +33,7 @@ _PULP_PYTHON_DISTRIBUTION_PATH = "/pulp/api/v3/distributions/python/pypi/"
 _LOGGER = logging.getLogger("thoth.pulp_repository_sync")
 init_logging()
 
-__version__ = "0.0.1"
+__version__ = "0.0.2"
 __component_version__ = f"{__version__}+storages.{__storages__version__}.common.{__common__version__}"
 
 
