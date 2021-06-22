@@ -34,7 +34,7 @@ _LOGGER = logging.getLogger("thoth.pulp_repository_sync")
 init_logging()
 
 __version__ = "0.0.1"
-__component_version__ = f"{__version__}+storages.{__storages__version__}" f".common.{__common__version__}"
+__component_version__ = f"{__version__}+storages.{__storages__version__}.common.{__common__version__}"
 
 
 def _list_pulp_python_repositories(instance_host: str, *, username: str, password: str) -> Generator[str, None, None]:
@@ -58,7 +58,7 @@ def _list_pulp_python_repositories(instance_host: str, *, username: str, passwor
     help="A pulp instance host to be checked for new Python package indexes.",
     type=str,
     required=True,
-    envvar="THOTH_PULP_REPOSITORIES_SYNC_PULP_INSTANCES",
+    envvar="THOTH_PULP_REPOSITORIES_SYNC_PULP_INSTANCE",
     metavar="HOST",
 )
 @click.option(
