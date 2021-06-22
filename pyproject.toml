@@ -1,6 +1,6 @@
 [project]
-name = "TODO"
-description = "TODO"
+name = "pulp-pypi-sync-job"
+description = "A periodic job that monitors new repositories created on Pulp instances"
 readme = "README.rst"
 requires-python = ">=3.8"
 license = {file = "LICENSE"}
