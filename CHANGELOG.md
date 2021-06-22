@@ -5,3 +5,9 @@
 ### Added
 
 * initial project import
+
+## Release 0.0.1 (2021-06-22T19:05:37)
+### Features
+* Use Python 3.8
+* Fix missing bits in the project
+* Initial project import
