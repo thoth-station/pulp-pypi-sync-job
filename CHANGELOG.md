@@ -11,3 +11,7 @@
 * Use Python 3.8
 * Fix missing bits in the project
 * Initial project import
+
+## Release 0.0.2 (2021-06-22T21:16:15)
+### Features
+* Fix environment variable name
