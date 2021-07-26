@@ -15,3 +15,10 @@
 ## Release 0.0.2 (2021-06-22T21:16:15)
 ### Features
 * Fix environment variable name
+
+## Release 0.1.0 (2021-07-26T20:05:14)
+### Features
+* :arrow_up: Automatic update of dependencies by Kebechet
+* Update and add standard GitHub templates
+* Let only_packages_seen be configurable
+* :robot: ci updates for aicoe-ci
