@@ -85,11 +85,20 @@ def _list_pulp_python_repositories(instance_host: str, *, username: str, passwor
     show_default=True,
     envvar="THOTH_PULP_REPOSITORIES_SYNC_DISABLE_INDEX",
 )
+@click.option(
+    "--only-if-package-seen",
+    help="Monitor only known packages for new releases on the registered Python package index",
+    is_flag=True,
+    required=False,
+    show_default=True,
+    envvar="THOTH_PULP_REPOSITORIES_ONLY_PACKAGES_SEEN",
+)
 def cli(
     pulp_instance: str,
     pulp_username: str,
     pulp_password: str,
     disable_index: bool = False,
+    only_if_package_seen: bool = False,
 ) -> None:
     """Monitor new pulp-python Python package indexes."""
     _LOGGER.info("Starting pulp-repository-sync-job in version %r", __component_version__)
@@ -109,7 +118,11 @@ def cli(
         if repository_url not in known_indexes:
             _LOGGER.info("Registering new pulp-python repository available at %r", repository_url)
             graph.register_python_package_index(
-                url=repository_url, warehouse_api_url=None, verify_ssl=True, enabled=not disable_index
+                url=repository_url,
+                warehouse_api_url=None,
+                verify_ssl=True,
+                enabled=not disable_index,
+                only_if_package_seen=only_if_package_seen,
             )
         else:
             _LOGGER.info("pulp-python repository available at %r is already known to Thoth", repository_url)
