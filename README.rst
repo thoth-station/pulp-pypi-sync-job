@@ -6,4 +6,4 @@ A periodic job that monitors new repositories created on `Pulp
 <https://pulp-python.readthedocs.io/en/latest/>`__.
 
 See `the linked YouTube video for more info
-<https://www.youtube.com/watch?v=MpDgLxhl0ac>`__.
+<https://youtu.be/qE_8Lmi3Vhw>`__.
