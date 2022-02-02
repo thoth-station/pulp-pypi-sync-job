@@ -49,7 +49,14 @@ def _list_pulp_python_repositories(instance_host: str, *, username: str, passwor
         simple_repository = (
             f"{result['base_url']}simple" if result["base_url"].endswith("/") else f"{result['base_url']}/simple"
         )
-        yield urlunparse(("https", instance_host, simple_repository, "", "", ""))
+
+        index = -1
+        for i in range(0, 3):
+            index = simple_repository.find("/", index + 1)
+        if instance_host[-1:] == "/":
+            yield urlunparse(("https", instance_host, simple_repository[index + 1 :], "", "", ""))
+        else:
+            yield urlunparse(("https", instance_host, simple_repository[index:], "", "", ""))
 
 
 @click.command()
