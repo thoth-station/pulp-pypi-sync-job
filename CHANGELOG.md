@@ -1,5 +1,15 @@
 # Changelog for Thoth's Pulp repository sync job
 
+## Release 0.1.1 (2022-02-02T22:00:35)
+* Adjust parsing of base_url when constructing Pulp PyPI
+* :arrow_up: Automatic update of dependencies by Kebechet for the ubi8 environment
+* :arrow_up: Automatic update of dependencies by Kebechet for the ubi8 environment
+* :arrow_up: Automatic update of dependencies by Kebechet for the ubi8 environment
+* :arrow_up: Automatic update of dependencies by Kebechet for the ubi8 environment
+* Fix link to YouTube video
+* Update README.rst
+* :arrow_up: Automatic update of dependencies by Kebechet
+
 ## [0.0.0] - 2021-Jun-21 - fpokorny
 
 ### Added
