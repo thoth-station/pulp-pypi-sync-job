@@ -19,6 +19,7 @@
 
 import click
 import logging
+from urllib.parse import urlparse
 from urllib.parse import urlunparse
 from typing import Generator
 
@@ -46,10 +47,10 @@ def _list_pulp_python_repositories(instance_host: str, *, username: str, passwor
     response.raise_for_status()
 
     for result in response.json()["results"]:
-        simple_repository = (
-            f"{result['base_url']}simple" if result["base_url"].endswith("/") else f"{result['base_url']}/simple"
+        path = urlparse(result["base_url"]).path
+        yield urlunparse(
+            ("https", instance_host, f"{path}/simple" if not path.endswith("/") else f"{path}simple", "", "", "")
         )
-        yield urlunparse(("https", instance_host, simple_repository, "", "", ""))
 
 
 @click.command()
