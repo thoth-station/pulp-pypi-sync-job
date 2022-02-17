@@ -8,3 +8,8 @@ build:
   registry-org: thoth-station
   registry-project: pulp-pypi-sync-job
   registry-secret: thoth-station-thoth-pusher-secret
+deploy:
+  image-name: 'pulp-pypi-sync-job'
+  overlay-contextpath: 'pulp-pypi-sync-job/overlays/test/imagestreamtag.yaml'
+  project-name: thoth-application
+  project-org: thoth-station
